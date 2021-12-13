@@ -1,0 +1,49 @@
+{
+    "auth": false,
+    "user": "admin",
+    "pass": "adminpw",
+
+    "servers": 
+    {
+        "host1": {
+            "ip": "194.5.206.188",
+            "couchDB_port": "5984"
+        },
+        "host2": {
+            "ip": "185.235.43.156",
+            "couchDB_port": "9984"
+        },
+        "host3": {
+            "ip": "185.235.42.186",
+            "couchDB_port": "7984"
+        },
+        "host4": {
+            "ip": "185.235.43.55",
+            "couchDB_port": "8984"
+        },
+        "host5": {
+            "ip": "185.235.40.52",
+            "couchDB_port": "9984"
+        },
+        "host6": {
+            "ip": "185.235.42.172",
+            "couchDB_port": "10984"
+        },
+        "host7": {
+            "ip": "185.235.40.72",
+            "couchDB_port": "11984"
+        },
+        "host8": {
+            "ip": "185.235.40.55",
+            "couchDB_port": "12984"
+        },
+        "host9": {
+            "ip": "194.5.192.103",
+            "couchDB_port": "13984"
+        },
+        "host10": {
+            "ip": "185.235.42.19",
+            "couchDB_port": "14984"
+        }
+    }
+}
