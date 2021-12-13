@@ -3,11 +3,13 @@ const colors = require('colors');
 const NodeCouchDb = require('node-couchdb');  
 
 // config
-const { servers, auth, user, pass } = require('./config.json');
-
+let configFile;
+process.argv[3] ? configFile = "config2.json" : configFile = "config.json"
+const { servers, auth, user, pass } = require(`./${configFile}`);
 
 // contains couchDB connection for every host
 let couchConnections = {};
+
 
 async function run() 
 {
@@ -98,6 +100,7 @@ function clearDatabase(couchConnection, hostname)
     {
         let docs = data.docs;
         let docs_num = +docs.length;
+        let deletedDocs = 0;
 
         if (!docs_num) {
             console.log(colors.bgBlue.black(`${hostname} couchDB is empty.\n`));
@@ -112,7 +115,8 @@ function clearDatabase(couchConnection, hostname)
                 {
                     console.log(colors.green(`Total length: ${docs_num} - Doc ${index+1} deleted.`));
                     
-                    if (index === docs_num-1) {
+                    deletedDocs++;
+                    if (deletedDocs === docs_num) {
                         console.log(colors.bgGreen.black(`${hostname} couchDB cleaned`));
                     }
                 }, 

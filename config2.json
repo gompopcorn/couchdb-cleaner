@@ -1,0 +1,13 @@
+{
+    "auth": true,
+    "user": "admin",
+    "pass": "adminpw",
+
+    "servers": 
+    {
+        "host1": {
+            "ip": "51.38.54.24",
+            "couchDB_port": "5984"
+        }
+    }
+}
