@@ -80,7 +80,8 @@ function clearDatabase(couchConnection, hostname)
 
     const mangoQuery = {
         selector: {
-            docType: 'car'
+            colour: 'black'
+            // docType: 'car',
             // _id: 'bash_car_1',
             // $gte: {speed: '199'},
             // $lt: {firstname: 'George'},
