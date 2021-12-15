@@ -91,9 +91,7 @@ function clearDatabase(couchConnection, hostname)
     const parameters = {};
 
 
-    console.log(colors.yellow(`\n**********************************************`));
-    console.log(colors.yellow(`          Cleaning started for ${hostname}`));
-    console.log(colors.yellow(`**********************************************\n`));
+    console.log(colors.yellow(`* Cleaning started for ${hostname}`));
      
 
     couchConnection.mango(dbName, mangoQuery, parameters).then(({data, headers, status}) => 
@@ -103,7 +101,7 @@ function clearDatabase(couchConnection, hostname)
         let deletedDocs = 0;
 
         if (!docs_num) {
-            console.log(colors.bgBlue.black(`${hostname} couchDB is empty.\n`));
+            console.log(colors.bgBlue.black(`* ${hostname} couchDB is empty.\n`));
         }
 
         else
