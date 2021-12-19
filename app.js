@@ -58,7 +58,7 @@ async function createCouchConnections()
         await couchConnection.listDatabases()
         .then(dbs => {
             couchConnections[hostname] = couchConnection;
-            console.log(colors.blue(`* Connected to couchDB of ${hostname} - ${serverIP} `));
+            console.log(colors.blue(`* Connected to couchDB of ${hostname} - ${serverIP}:${couchDB_port} `));
         }, 
         err => {
             if (err.code === "ECONNREFUSED") {
